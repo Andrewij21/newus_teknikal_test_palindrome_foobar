@@ -1,7 +1,8 @@
 function isPalindrome(line) {
-  const a = line.split("").reverse().join("");
-  return a == line ? true : false;
+  const formatedLine = line.replace(/\s+/g, "").toLowerCase();
+  const reverseFormatedLine = formatedLine.split("").reverse().join("");
+  return formatedLine == reverseFormatedLine ? true : false;
 }
 
-const line = isPalindrome(".!!.");
+const line = isPalindrome("123 321");
 console.info(line);
